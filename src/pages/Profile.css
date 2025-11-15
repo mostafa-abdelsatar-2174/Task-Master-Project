@@ -1,0 +1,434 @@
+/* Profile.css - Modern Profile & Dashboard Styles */
+
+/* --- Theme variables --- */
+:root {
+  --bg: #f8f9fa;
+  --card-bg: #ffffff;
+  --text: #212529;
+  --muted: #6c757d;
+  --primary: #0d6efd;
+  --danger: #dc3545;
+  --success: #198754;
+  --warning: #ffc107;
+  --info: #0dcaf0;
+  --secondary: #6c757d;
+  --border-light: rgba(0,0,0,0.08);
+  --shadow-light: rgba(16,24,40,0.06);
+  --gradient-light: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%);
+}
+
+/* Dark theme overrides */
+body.dark-mode,
+.profile-page.dark-mode {
+  --bg: #0b0f14;
+  --card-bg: #111418;
+  --text: #e6eef8;
+  --muted: #94a3b8;
+  --primary: #2563eb;
+  --danger: #ff6b6b;
+  --success: #2bd39b;
+  --warning: #f59e0b;
+  --info: #06b6d4;
+  --secondary: #64748b;
+  --border-light: rgba(255,255,255,0.1);
+  --shadow-light: rgba(0,0,0,0.3);
+  --gradient-light: linear-gradient(135deg, #111418 0%, #0b0f14 100%);
+}
+
+/* Page background + transition */
+.profile-page {
+  background: var(--bg);
+  color: var(--text);
+  transition: background 0.25s ease, color 0.25s ease;
+  padding-bottom: 40px;
+  min-height: 100vh;
+}
+
+/* Generic card style */
+.profile-page .card {
+  background: var(--gradient-light);
+  color: var(--text);
+  border: 1px solid var(--border-light);
+  border-radius: 16px;
+  box-shadow: 0 4px 12px var(--shadow-light);
+  transition: all 0.3s ease;
+}
+
+.profile-page .card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px var(--shadow-light);
+}
+
+/* Navigation Tabs */
+.profile-page .nav-tabs {
+  border: none;
+  background: transparent;
+}
+
+.profile-page .nav-tabs .nav-link {
+  border: none;
+  border-radius: 0;
+  color: var(--muted);
+  font-weight: 600;
+  padding: 12px 24px;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.profile-page .nav-tabs .nav-link:hover {
+  color: var(--primary);
+  background: rgba(13, 110, 253, 0.05);
+}
+
+.profile-page .nav-tabs .nav-link.active {
+  color: var(--primary);
+  background: transparent;
+  border-bottom: 3px solid var(--primary);
+}
+
+/* Dark mode tabs */
+body.dark-mode .profile-page .nav-tabs .nav-link:hover {
+  background: rgba(37, 99, 235, 0.1);
+}
+
+/* Profile Avatar */
+.profile-avatar {
+  background: var(--primary);
+  border: 4px solid var(--card-bg);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+/* Statistics Cards */
+.stats-card {
+  background: var(--gradient-light);
+  border: 1px solid var(--border-light);
+  border-radius: 16px;
+  transition: all 0.3s ease;
+  height: 100%;
+}
+
+.stats-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 25px var(--shadow-light);
+}
+
+.stats-card .card-icon {
+  opacity: 0.8;
+  margin-bottom: 12px;
+}
+
+.stats-card h3 {
+  font-weight: 700;
+  margin-bottom: 4px;
+}
+
+/* Form Controls */
+.profile-page .form-control {
+  background: var(--card-bg);
+  color: var(--text);
+  border: 2px solid var(--border-light);
+  border-radius: 10px;
+  padding: 10px 12px;
+  font-size: 0.95rem;
+  transition: all 0.3s ease;
+}
+
+.profile-page .form-control:focus {
+  border-color: var(--primary);
+  box-shadow: 0 0 0 3px rgba(13, 110, 253, 0.1);
+  background: var(--card-bg);
+}
+
+.profile-page .form-control:disabled {
+  background: rgba(0,0,0,0.05);
+  opacity: 0.7;
+}
+
+/* Dark mode form controls */
+body.dark-mode .profile-page .form-control {
+  background: var(--card-bg);
+  border: 2px solid var(--border-light);
+}
+
+body.dark-mode .profile-page .form-control:focus {
+  border-color: var(--primary);
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+}
+
+body.dark-mode .profile-page .form-control:disabled {
+  background: rgba(255,255,255,0.05);
+}
+
+/* Buttons */
+.profile-page .btn {
+  border-radius: 10px;
+  font-weight: 600;
+  padding: 8px 16px;
+  transition: all 0.3s ease;
+}
+
+.profile-page .btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+}
+
+/* Badges */
+.profile-page .badge {
+  font-size: 0.8rem;
+  padding: 6px 10px;
+  border-radius: 20px;
+}
+
+/* System Info Cards */
+.system-info-card {
+  background: var(--gradient-light);
+  border: 1px solid var(--border-light);
+  border-radius: 16px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .profile-page .nav-tabs .nav-link {
+    padding: 8px 16px;
+    font-size: 0.9rem;
+  }
+
+  .profile-page .stats-card {
+    margin-bottom: 16px;
+  }
+
+  .profile-page .card {
+    margin-bottom: 16px;
+  }
+}
+
+/* Loading States */
+.profile-page .spinner-border {
+  width: 1rem;
+  height: 1rem;
+}
+
+/* Success/Error Alerts */
+.profile-page .alert {
+  border-radius: 10px;
+  border: none;
+  font-weight: 500;
+}
+
+/* Animation for tab transitions */
+.profile-page .tab-pane {
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Custom scrollbar for dark mode */
+body.dark-mode .profile-page ::-webkit-scrollbar {
+  width: 8px;
+}
+
+body.dark-mode .profile-page ::-webkit-scrollbar-track {
+  background: var(--bg);
+}
+
+body.dark-mode .profile-page ::-webkit-scrollbar-thumb {
+  background: var(--muted);
+  border-radius: 4px;
+}
+
+body.dark-mode .profile-page ::-webkit-scrollbar-thumb:hover {
+  background: var(--primary);
+}
+
+/* Additional Profile Page Enhancements */
+.profile-page .display-5 {
+  font-weight: 700;
+  background: linear-gradient(135deg, var(--primary), var(--info));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Dark mode gradient text */
+body.dark-mode .profile-page .display-5 {
+  background: linear-gradient(135deg, #60a5fa, #34d399);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Enhanced card animations */
+.profile-page .card {
+  backdrop-filter: blur(10px);
+  border: 1px solid var(--border-light);
+}
+
+body.dark-mode .profile-page .card {
+  backdrop-filter: blur(10px);
+}
+
+/* Tab content animations */
+.profile-page .tab-content {
+  animation: slideInUp 0.4s ease-out;
+}
+
+@keyframes slideInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Enhanced stats cards */
+.profile-page .stats-card {
+  position: relative;
+  overflow: hidden;
+}
+
+.profile-page .stats-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.1), transparent);
+  transition: left 0.5s;
+}
+
+.profile-page .stats-card:hover::before {
+  left: 100%;
+}
+
+/* Dark mode stats cards */
+body.dark-mode .profile-page .stats-card::before {
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.05), transparent);
+}
+
+/* Profile avatar enhancements */
+.profile-page .profile-avatar {
+  position: relative;
+  transition: transform 0.3s ease;
+}
+
+.profile-page .profile-avatar:hover {
+  transform: scale(1.05);
+}
+
+/* Form enhancements */
+.profile-page .form-control {
+  transition: all 0.3s ease;
+}
+
+.profile-page .form-control:hover {
+  border-color: var(--primary);
+  box-shadow: 0 0 0 1px rgba(13, 110, 253, 0.1);
+}
+
+/* Button enhancements */
+.profile-page .btn {
+  position: relative;
+  overflow: hidden;
+}
+
+.profile-page .btn::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  background: rgba(255,255,255,0.2);
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  transition: width 0.3s, height 0.3s;
+}
+
+.profile-page .btn:active::before {
+  width: 300px;
+  height: 300px;
+}
+
+/* Edit Profile Button Enhancement */
+.profile-page .edit-profile-btn {
+  background: linear-gradient(135deg, var(--primary) 0%, #0056b3 100%);
+  border: none;
+  box-shadow: 0 4px 15px rgba(13, 110, 253, 0.3);
+  transition: all 0.3s ease;
+}
+
+.profile-page .edit-profile-btn:hover {
+  background: linear-gradient(135deg, #0056b3 0%, var(--primary) 100%);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(13, 110, 253, 0.4);
+}
+
+body.dark-mode .profile-page .edit-profile-btn {
+  background: linear-gradient(135deg, #2563eb 0%, #1d4ed8 100%);
+  box-shadow: 0 4px 15px rgba(37, 99, 235, 0.3);
+}
+
+body.dark-mode .profile-page .edit-profile-btn:hover {
+  background: linear-gradient(135deg, #1d4ed8 0%, #2563eb 100%);
+  box-shadow: 0 6px 20px rgba(37, 99, 235, 0.4);
+}
+
+/* Loading spinner enhancement */
+.profile-page .spinner-border {
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* Success/Error alerts enhancement */
+.profile-page .alert {
+  border-radius: 12px;
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(0,0,0,0.1);
+}
+
+body.dark-mode .profile-page .alert {
+  border: 1px solid rgba(255,255,255,0.1);
+}
+
+/* Badge enhancements */
+.profile-page .badge {
+  backdrop-filter: blur(5px);
+  border: 1px solid rgba(255,255,255,0.2);
+}
+
+body.dark-mode .profile-page .badge {
+  border: 1px solid rgba(255,255,255,0.1);
+}
+
+/* Responsive improvements */
+@media (max-width: 576px) {
+  .profile-page .display-5 {
+    font-size: 2rem;
+  }
+
+  .profile-page .nav-tabs .nav-link {
+    font-size: 0.85rem;
+    padding: 8px 12px;
+  }
+
+  .profile-page .stats-card {
+    margin-bottom: 1rem;
+  }
+}

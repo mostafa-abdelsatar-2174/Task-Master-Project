@@ -1,0 +1,196 @@
+/* Navbar Links */
+.nav-link-custom {
+  color: #fff !important;
+  margin: 0 10px;
+  transition: color 0.3s ease;
+}
+
+.nav-link-custom:hover {
+  color: #ffd700 !important;
+  background-color: rgba(255, 215, 0, 0.1) !important; 
+  border-radius: 5px;
+  padding: 5px 10px;
+}
+
+/* Light Mode Navbar Links */
+.custom-navbar.light .nav-link-custom {
+  color: #21253a !important; /* Dark blue for light mode */
+}
+
+.custom-navbar.light .nav-link-custom:hover {
+  color: #ffc107 !important; /* Warning color on hover only */
+  background-color: rgba(255, 193, 7, 0.1) !important; 
+  border-radius: 5px;
+  padding: 5px 10px;
+}
+
+/* Auth Buttons */
+.auth-btn {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  padding: 5px 12px;
+  font-weight: 500;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.auth-btn:hover {
+  background-color: #0056b3;
+  color: #fff;
+}
+
+/* Dark Mode Buttons */
+body.dark-mode .auth-btn {
+  background-color: transparent;
+  color: #03dac6;
+  border: 2px solid #03dac6;
+}
+
+body.dark-mode .auth-btn:hover {
+  background-color: rgba(3, 218, 198, 0.1);
+  color: #03dac6;
+  border: 2px solid #03dac6;
+}
+
+/* Dark Mode Navbar */
+body.dark-mode .custom-navbar {
+  background-color: #222 !important;
+}
+
+body.dark-mode {
+  background-color: #121212;
+  color: #f5f5f5;
+}
+/* Light Mode Navbar */
+.custom-navbar.light {
+  background: #0ea6e2 !important;
+  backdrop-filter: blur(8px);
+}
+
+/* Dark Mode Navbar */
+.custom-navbar.dark {
+  background: #1e1f29 !important; 
+  backdrop-filter: blur(8px);
+}
+
+/* Login & Register Buttons */
+.auth-btn {
+  font-weight: 600;
+  transition: all 0.3s ease;
+  border-radius: 8px;
+}
+
+.auth-btn:hover {
+  transform: scale(1.05);
+  /* transform: translateY(-2px); */
+}
+
+/* Theme Toggle Button */
+.toggle-btn {
+  border-radius: 8px;
+  font-weight: 600;
+}
+.toggle-btn:hover {
+  transform: scale(1.05);
+}
+
+/* Light Mode Brand */
+.custom-navbar.light .navbar-brand {
+  color: #21253a !important; /* Dark blue for TaskMaster in light mode */
+}
+
+/* Dark Mode Brand */
+body.dark-mode .custom-navbar .navbar-brand {
+  color: #3b82f6 !important; /* Bright blue for TaskMaster in dark mode */
+}
+
+/* Light mode notification button hover */
+.custom-navbar.light .btn-outline-info:hover {
+  background-color: #ffd700 !important; /* Gold color */
+  border-color: #ffd700 !important;
+  color: #000000 !important;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(255, 215, 0, 0.3);
+}
+
+/* Light mode notification button styling */
+.custom-navbar.light .btn-outline-warning {
+  border-color: #ffc107 !important;
+  color: #ffc107 !important;
+  background-color: transparent;
+}
+
+.custom-navbar.light .btn-outline-warning:hover {
+  background-color: #ffd700 !important;
+  border-color: #ffd700 !important;
+  color: #000000 !important;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(255, 215, 0, 0.3);
+}
+
+/* Hide dropdown arrow for notifications */
+#notifications-dropdown::after {
+  display: none !important;
+}
+
+#notifications-dropdown {
+  border: none !important;
+  box-shadow: none !important;
+}
+
+#notifications-dropdown:hover {
+  background-color: transparent !important;
+  border-color: transparent !important;
+}
+
+/* Notification button hover background - bright and clear like the bell */
+.custom-navbar.light #notifications-dropdown:hover {
+  background-color: rgba(255, 215, 0, 0.6) !important;
+  border-radius: 5px;
+}
+
+.custom-navbar.dark #notifications-dropdown:hover {
+  background-color: rgba(56, 189, 248, 0.6) !important;
+  border-radius: 5px;
+}
+
+/* User email styling in dark mode */
+.custom-navbar.dark .dropdown-menu .text-muted {
+  color: #ffffff !important;
+}
+
+.custom-navbar.dark .dropdown-item .text-muted {
+  color: #ffffff !important;
+}
+
+/* More specific email styling */
+.custom-navbar.dark .dropdown-toggle .text-muted {
+  color: #ffffff !important;
+}
+
+.custom-navbar.dark .dropdown-menu .small.text-muted {
+  color: #ffffff !important;
+}
+
+/* User email styling - white normally, black on hover/click */
+.custom-navbar .dropdown-toggle .text-muted {
+  color: #ffffff !important;
+}
+
+.custom-navbar .dropdown-toggle:hover .text-muted,
+.custom-navbar .dropdown-toggle:focus .text-muted {
+  color: #000000 !important;
+}
+
+/* User dropdown items hover effects in light mode */
+.custom-navbar.light .dropdown-item:hover {
+  background-color: rgba(13, 110, 253, 0.1) !important;
+  color: #0d6efd !important;
+  transform: translateX(5px);
+  transition: all 0.3s ease;
+}
+
+.custom-navbar.light .dropdown-item {
+  transition: all 0.3s ease;
+}

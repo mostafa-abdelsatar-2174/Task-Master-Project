@@ -1,0 +1,48 @@
+.page-container {
+  min-height:calc(100vh - 90px) ;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.auth-card {
+  width: 100%;
+  max-width: 400px;
+  border-radius: 10px;
+  background: #fff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+
+/* dark mode */
+body.dark-mode .auth-card {
+  background: #1e1e1e;
+  color: #fff;
+  border: 1px solid #333;
+  box-shadow: 0 0 10px 15px rgba(255, 255, 255, 0.1);
+}
+
+body.dark-mode .form-control {
+  background-color: #2a2a2a;
+  color: #fff;
+  border: 1px solid #555;
+}
+
+body.dark-mode label {
+  color: #ddd;
+}
+
+body.dark-mode a {
+  color: #bb86fc;
+}
+
+body.dark-mode .btn-success {
+  background-color: #03dac6;
+  border-color: #03dac6;
+  color: #000;
+}
+
+body.dark-mode .btn-success:hover {
+  background-color: #02c4ad;
+  border-color: #02c4ad;
+}

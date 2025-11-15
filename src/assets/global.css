@@ -1,0 +1,73 @@
+body {
+  font-family: "Poppins", sans-serif;
+  min-height: 100vh;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+
+.navbar-custom {
+  background: rgba(35, 41, 70, 0.8) !important;
+  backdrop-filter: blur(12px);
+  border-radius: 15px;
+  margin: 10px 20px;
+  padding: 8px 15px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+}
+
+
+.navbar-brand {
+  font-size: 1.5rem !important;
+  font-weight: bold;
+  color: #ff6ec7 !important;
+}
+
+.nav-link {
+  color: #d6d6e7 !important;
+  transition: all 0.3s ease;
+  font-weight: 500;
+}
+
+.nav-link:hover {
+  color: #00f5d4 !important;
+  transform: translateY(-2px);
+}
+
+.btn-login {
+  border: 2px solid #ff6ec7 !important;
+  color: #ff6ec7 !important;
+  background: transparent !important;
+}
+
+.btn-login:hover {
+  background: #ff6ec7 !important;
+  color: #fff !important;
+}
+
+.btn-register {
+  background: #00f5d4 !important;
+  border: none !important;
+  color: #1e1f29 !important;
+  font-weight: 600;
+}
+
+.btn-register:hover {
+  background: #00cba9 !important;
+}
+/* src/index.css */
+body.dark-mode {
+  background-color: #121212;
+  color: #f1f1f1;
+}
+
+body.light-mode {
+  background-color: #ffffff;
+  color: #000000;
+}
+
+.dark .navbar {
+  background-color: #1f1f1f !important;
+}
+
+.light .navbar {
+  background-color: #007bff !important;
+}
